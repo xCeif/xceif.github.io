@@ -432,6 +432,7 @@ textarea:focus {
 
 
 @media(max-width: 768px){
+    
     .footer-nav {
         display: block;
     }
@@ -520,11 +521,11 @@ textarea:focus {
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 20px;
+    }
 }
 
 @media(max-width: 480px){
     .fotos-box {
         grid-template-columns: 1fr;
     }
-
 }
