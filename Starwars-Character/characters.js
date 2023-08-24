@@ -27,13 +27,13 @@ async function loadCharacters(url) {
         responseJson.results.forEach((character) => {
             const card = document.createElement("div")
             card.style.backgroundImage = `url('https://starwars-visualguide.com/assets/img/characters/${character.url.replace(/\D/g, "")}.jpg')`
-            card.className = "cards"
+            card.className = "character-cards"
 
             const characterNameBG = document.createElement("div")
-            characterNameBG.className = "character-name-bg"
+            characterNameBG.className = "name-bg"
 
             const characterName = document.createElement("span")
-            characterName.className = "character-name"
+            characterName.className = "name"
             characterName.innerText = `${character.name}`
 
             characterNameBG.appendChild(characterName)
@@ -48,26 +48,26 @@ async function loadCharacters(url) {
 
                 const characterImage = document.createElement('div')
                 characterImage.style.backgroundImage = `url('https://starwars-visualguide.com/assets/img/characters/${character.url.replace(/\D/g, "")}.jpg')`
-                characterImage.className = "character-image"
+                characterImage.className = "image"
 
                 const name = document.createElement("span")
-                name.className = "character-details"
+                name.className = "details"
                 name.innerText = `Nome: ${character.name}`
 
                 const characterHeight = document.createElement("span")
-                characterHeight.className = "character-details"
+                characterHeight.className = "details"
                 characterHeight.innerText = `Altura: ${convertHeight(character.height)}`
 
                 const characterMass = document.createElement("span")
-                characterMass.className = "character-details"
+                characterMass.className = "details"
                 characterMass.innerText = `Peso: ${convertMass(character.mass)}`
 
                 const characterEyeColor = document.createElement("span")
-                characterEyeColor.className = "character-details"
+                characterEyeColor.className = "details"
                 characterEyeColor.innerText = `Cor dos Olhos: ${convertEyeColor(character.eye_color)}`
 
                 const characterBirthYear = document.createElement("span")
-                characterBirthYear.className = "character-details"
+                characterBirthYear.className = "details"
                 characterBirthYear.innerText = `Nascimento: ${convertBirth(character.birth_year)}`
 
                 modalContent.appendChild(characterImage)
