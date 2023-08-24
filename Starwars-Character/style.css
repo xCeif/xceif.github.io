@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Star Jedi'; 
-    src: url('font/starjedi.ttf');
+    src: url('./font/starjedi.ttf');
 }
 
 * {
