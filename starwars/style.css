@@ -13,13 +13,13 @@
 
 html {
     margin: 0 auto;
-    max-width: 1280px;
 }
 
 body {
     background-image: url("./assets/bg.png");
     background-size: cover;
     background-size: 40%;
+
 }
 
 a {
@@ -27,6 +27,9 @@ a {
 }
 
 header {
+    background-color: #0d0d0d;
+    position: sticky;
+    top: 0;
     height: 70px;
     display: flex;
     align-items: center;
@@ -67,6 +70,13 @@ header {
 .social-media {
     width: 150px;
     display: flex;
+    justify-content: space-between;
+}
+
+.social-media-menu {
+    width: 150px;
+    display: flex;
+    margin-top: 50px;
     justify-content: space-between;
 }
 
@@ -139,11 +149,28 @@ h2 {
     padding: 5px;
 }
 
+.ship-cards {
+    width: 230px;
+    height: 300px;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 5px;
+}
+
 .character-cards:hover {
     transform: scale(1.2);
 }
 
 .planet-cards:hover {
+    transform: scale(1.2);
+}
+
+.ships-cards:hover {
     transform: scale(1.2);
 }
 
@@ -258,6 +285,14 @@ footer {
     background-size: cover;
 }
 
+.menu-image {
+    width: 150px;
+    height: 100px;
+    background-position: 50% 10%;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
 .details{
     font-family: 'Star Jedi', sans-serif;
     color: gold;
@@ -266,8 +301,20 @@ footer {
     text-align: center;
 }
 
-@media (max-width: 769px) {
+.menu-list{
+    font-family: 'Star Jedi', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    font-weight: lighter;
+    text-align: center;
+    margin: 20px 0;
+}
 
+.menu-list:hover{
+    color: gold;
+}
+
+@media (max-width: 769px) {
 
 
     .nav-bar {
