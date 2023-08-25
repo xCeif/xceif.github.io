@@ -60,15 +60,15 @@ async function loadShips(url) {
 
                 const shipSpeed = document.createElement("span")
                 shipSpeed.className = "details"
-                shipSpeed.innerText = `velocidade: ${ship.max_atmosphering_speed}km/h`
+                shipSpeed.innerText = `velocidade: ${speedCheck(ship.max_atmosphering_speed)}`
                 
                 const crew = document.createElement("span")
                 crew.className = "details"
-                crew.innerText = `Tripulação: ${convertPop(ship.crew)}`
+                crew.innerText = `Tripulação: ${ship.crew}`
 
                 const passengers = document.createElement("span")
                 passengers.className = "details"
-                passengers.innerText = `Passageiros: ${convertPop(ship.passengers)}`
+                passengers.innerText = `Passageiros: ${passengerCheck(ship.passengers)}`
                 
                 modalContent.appendChild(shipImage)
                 modalContent.appendChild(name)
@@ -135,10 +135,15 @@ function hideModal() {
     modal.style.visibility = "hidden"
 }
 
-function convertPop(pop) {
-    if (pop === "unknown") {
-        return "desconhecido"
+function speedCheck(speed) {
+    if (speed === "n/a") {
+        return "desconhecida"
     }
-
-    return pop
+    return `${speed} km/h`
+}
+function passengerCheck(passenger) {
+    if (passenger === "n/a") {
+        return "desconhecida"
+    }
+    return passenger
 }
